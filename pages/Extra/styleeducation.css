@@ -1,0 +1,211 @@
+body {
+    background: #111;
+    height: 100vh;
+    }
+.wrapper li{
+    position: fixed;
+    bottom: -180px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+    color: transparent;
+    background-color: black;
+    box-shadow: 0 0 50px darkblue,
+                0 0 100px darkcyan,
+                0 0 150px blue,
+                0 0 200px lightblue;
+    animation: animate 10s linear infinite;
+}
+
+.wrapper li:nth-child(1){
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+    }
+    
+    
+.wrapper li:nth-child(2){
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+    
+.wrapper li:nth-child(3){
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+    }
+    
+.wrapper li:nth-child(4){
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+}
+    
+.wrapper li:nth-child(5){
+        left: 65%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s;
+    }
+    
+.wrapper li:nth-child(6){
+        left: 75%;
+        width: 110px;
+        height: 110px;
+        animation-delay: 3s;
+    }
+    
+.wrapper li:nth-child(7){
+        left: 35%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 7s;
+    }
+    
+.wrapper li:nth-child(8){
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        animation-delay: 15s;
+        animation-duration: 45s;
+    }
+    
+.wrapper li:nth-child(9){
+        left: 20%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 2s;
+        animation-duration: 35s;
+    }
+    
+.wrapper li:nth-child(10){
+        left: 85%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 0s;
+        animation-duration: 11s;
+    }
+
+@keyframes animate {
+
+        0%{
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+            border-radius: 0;
+        }
+    
+        100%{
+            transform: translateY(-1000px) rotate(720deg);
+            opacity: 0;
+            border-radius: 50%;
+        }
+    }
+
+
+    * {
+        padding: 0;
+        margin: 0;
+        -webkit-text-fill-color: transparent ;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+      }
+
+     h2 {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        letter-spacing: 4px;
+      }
+      
+      .card {
+        border-radius: 110px;
+        filter: drop-shadow(0 5px 10px 0 white);
+        width: 400px;
+        height: 170px;
+        background-color: transparent;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.6s ease-in;
+        margin: 80px;
+        margin-left: 20%;
+      }
+      a{
+        position: relative;
+        top: 40px
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -5px;
+        right: -15px;
+        background: darkcyan;
+        height: 20px;
+        width: 25px;
+        border-radius: 32px;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        transition: transform 0.25s ease-out;
+      }
+
+      .card:hover::before{
+        transition-delay:0.2s ;
+    
+      transform: scale(40);
+    }
+    
+ 
+header {
+    text-align: center;
+     font-size: 100px;
+     -webkit-text-stroke-width: 7px;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     letter-spacing: 12px;
+     border: 5px double;
+     border-color:white;
+     margin: 50px 600px 50px 600px;
+     position: relative;
+
+     animation-name: opacity;
+     animation-duration: 5s;
+     animation-timing-function: ease;
+     animation-direction: normal;
+     animation-iteration-count: 1;
+
+}
+main {
+    text-align: center;
+     font-size: 40px;
+     -webkit-text-stroke-width: 2px;
+     font-family: monospace;
+     padding: 150px;
+}
+footer{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 100px;
+    border-style: solid none none;
+    border-color:white;
+    margin: 50px 700px 50px 700px;
+    padding-top: 10px;
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
